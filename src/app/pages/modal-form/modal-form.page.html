@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agregar Producto</ion-title>
+    <ion-button (click)="dismis()" color="danger" slot="end">
+      <ion-icon name="close-sharp"></ion-icon>
+      Cancelar
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ">
+  <form>
+    <!--<ion-item>
+      <form action="/action_page.php">
+        <label for="myfile">Selecciona una imagen:</label>
+        <Input type="file" id="txtimg" name="txtimg" [(value)]="img">
+      </form>
+    </ion-item>-->
+    <ion-item>
+      <ion-label position="stacked">Nombre:</ion-label>
+      <ion-input type="text" placeholder="Escriba el nombre del producto..." id="txtnombre" name="txtnombre"
+        [(ngModel)]="nombre">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Precio:</ion-label>
+      <ion-input type="number" placeholder="Agregue un precio al producto..." id="floatnumero" name="floatnumero"
+        [(ngModel)]="precio">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Descripción:</ion-label>
+      <ion-textarea placeholder="Describa algunos detalles del procucto" id="txtdescrip" name="txtdescrip"
+        [(ngModel)]="descripcion"></ion-textarea>
+    </ion-item>
+
+    <ion-button (click)="add()" expand="block" shape="round">
+      <ion-icon slot="start" name="save-outline"></ion-icon>
+      AGREGAR PRODUCTO
+    </ion-button>
+  </form>
+</ion-content>

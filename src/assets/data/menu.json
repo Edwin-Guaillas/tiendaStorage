@@ -1,0 +1,18 @@
+[
+
+    {
+        "ruta":"/pro-storage",
+        "nombre":"PRODUCTOS",
+        "icono":"bag-check",
+        "color":"secondary",
+        "colorIcon":"dark"
+    },
+    {
+        "ruta":"/modal-form",
+        "nombre":"HISTORIAL",
+        "icono":"document-attach",
+        "color":"success",
+        "colorIcon":"warning"
+    }
+
+]

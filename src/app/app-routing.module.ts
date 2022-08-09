@@ -3,13 +3,25 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'inicio',
+    loadChildren: () => import('./pages/inicio/inicio.module').then(m => m.InicioPageModule)
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'inicio',
     pathMatch: 'full'
+  },
+  {
+    path: 'modal-form',
+    loadChildren: () => import('./pages/modal-form/modal-form.module').then(m => m.ModalFormPageModule)
+  },
+  {
+    path: 'productos',
+    loadChildren: () => import('./pages/productos/productos.module').then(m => m.ProductosPageModule)
+  },
+  {
+    path: 'pro-storage',
+    loadChildren: () => import('./pages/pro-storage/pro-storage.module').then(m => m.ProStoragePageModule)
   },
 ];
 

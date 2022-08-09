@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="dismis()" fill="clear">
+        <ion-icon slot="icon-only" name="close-sharp" class="delete"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title color="danger">Modificación del Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding animate__animated animate__pulse">
+  <form>
+    <ion-item>
+      <ion-label position="floating">Nombre:</ion-label>
+      <ion-input type="text" placeholder="Escriba el nombre del producto" id="txtnombre" name="txtnombre"
+        [(ngModel)]="nombre">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Precio:</ion-label>
+      <ion-input type="number" placeholder="Agregue un precio al prducto" id="floatnumero" name="floatnumero"
+        [(ngModel)]="precio">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descripción:</ion-label>
+      <ion-textarea placeholder="Describe sobre el procucto" id="txtdescrip" name="txtdescrip"
+        [(ngModel)]="descripcion"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-button expand="block" shape="round" color="warning" size="default" (click)="update()">
+        <ion-icon slot="start" name="sync-sharp"></ion-icon>
+        Actualizar
+      </ion-button>
+    </ion-item>
+  </form>
+</ion-content>
